@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(to bottom right, #fceabb, #f8b500);
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #d62828;
+  font-size: 2.2rem;
+}
+
+/* Search and filter controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.controls input,
+.controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Pokémon grid */
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Pokémon card */
+.pokemon {
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.pokemon:hover {
+  background: #f1f1f1;
+  transform: translateY(-5px);
+}
+
+/* Pokémon image inside the card */
+.pokemon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Pokémon name inside the card */
+.pokemon h2 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Hidden class for modal */
+.hidden {
+  display: none;
+}
+
+/* Close button */
+#closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Modal details */
+#modalDetails {
+  text-align: center;
+}
+
+/* Big Pokémon image in modal */
+#modalDetails img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+/* Pokémon name in modal */
+#modalDetails h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #d62828;
+  text-transform: capitalize;
+}
+
+/* Types section inside modal */
+#modalDetails .types {
+  margin-bottom: 1rem;
+}
+
+/* Type badges */
+.type-badge {
+  display: inline-block;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* Stats section */
+.stats {
+  text-align: left;
+}
+
+/* Each stat item */
+.stats p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+/* Pagination controls */
+.pagination {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #f77f00;
+  color: white;
+  cursor: pointer;
+}
+
+/* Disabled pagination button */
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive grid for smaller screens */
+@media (max-width: 600px) {
+  #pokedex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/* Added more improvements for smaller screens */
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .pokemon {
+    padding: 0.8rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
