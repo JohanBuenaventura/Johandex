@@ -87,8 +87,8 @@ function openModal(pokemon) {
     <img src="${pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default}" alt="${pokemon.name}" />
     <h2>${pokemon.name}</h2>
     <div class="types">
-      ${pokemon.types.map(t => `<span class="type-badge">${t.type.name}</span>`).join('')}
-    </div>
+  ${pokemon.types.map(t => `<span class="type-badge ${t.type.name}">${t.type.name}</span>`).join('')}
+</div>
     <div class="stats">
       ${pokemon.stats.map(s => `<p><strong>${capitalize(s.stat.name)}:</strong> ${s.base_stat}</p>`).join('')}
     </div>
