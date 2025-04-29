@@ -16,7 +16,7 @@ const perPage = 50; // Number of Pokémon per page
 
 // Fetch Pokémon list from PokeAPI
 async function fetchPokemonList() {
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=200`);
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=2000`);
   const data = await res.json();
 
   // Fetch detailed info for each Pokémon
